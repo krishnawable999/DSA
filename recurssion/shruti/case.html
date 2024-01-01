@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Filing Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: url("login.jpg")no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px ;
+            
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+        .form-group {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    
+}
+
+        input[type="text"],
+        input[type="file"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>In the Court of <input type="text" id="courtName" name="courtName" required></h1>
+        <h2>Civil/Criminal Case Filing Form</h2>
+        
+        <h3>Case Type</h3>
+        <label for="caseType">Case Type:</label>
+        <input type="text" id="caseType" name="caseType" required>
+        
+        <h3>PLAINTIFF / APPELLANT / APPLICANT DETAILS</h3>
+        <div class="form-section">
+            <div class="form-group">
+                <label for="plaintiffName">Name:</label>
+                <input type="text" id="plaintiffName" name="plaintiffName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffParent">Father / Mother / Husband:</label>
+                <input type="text" id="plaintiffParent" name="plaintiffParent">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffAddress">Address:</label>
+                <input type="text" id="plaintiffAddress" name="plaintiffAddress">
+            </div>
+            
+            <div class="form-group">
+                <label>Sex:</label>
+                <div class="radio-group">
+                    <input type="radio" id="plaintiffMale" name="plaintiffSex" value="Male">
+                    <label for="plaintiffMale">Male</label>
+                    <input type="radio" id="plaintiffFemale" name="plaintiffSex" value="Female">
+                    <label for="plaintiffFemale">Female</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffAge">Age:</label>
+                <input type="text" id="plaintiffAge" name="plaintiffAge">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffCaste">Caste:</label>
+                <input type="text" id="plaintiffCaste" name="plaintiffCaste">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffNationality">Nationality:</label>
+                <input type="text" id="plaintiffNationality" name="plaintiffNationality" value="Indian">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffOtherNationality">If Other Mentioned:</label>
+                <input type="text" id="plaintiffOtherNationality" name="plaintiffOtherNationality">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffOccupation">Occupation:</label>
+                <input type="text" id="plaintiffOccupation" name="plaintiffOccupation">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffEmail">E-mail Address:</label>
+                <input type="email" id="plaintiffEmail" name="plaintiffEmail">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffPhone">Phone No.:</label>
+                <input type="text" id="plaintiffPhone" name="plaintiffPhone">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffMobile">Mobile No.:</label>
+                <input type="text" id="plaintiffMobile" name="plaintiffMobile">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffFax">Fax No.:</label>
+                <input type="text" id="plaintiffFax" name="plaintiffFax">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffSubject">Subject:</label>
+                <textarea id="plaintiffSubject" name="plaintiffSubject"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffAdvocateCode">Advocate Code:</label>
+                <input type="text" id="plaintiffAdvocateCode" name="plaintiffAdvocateCode">
+            </div>
+            
+            <div class="form-group">
+                <label for="plaintiffAdvocateName">Advocate Name:</label>
+                <input type="text" id="plaintiffAdvocateName" name="plaintiffAdvocateName">
+            </div>
+        </div>
+        
+        <!-- Similar sections for DEFENDANT / RESPONDENT / NON APPLICANT DETAILS, LOWER COURT DETAILS, MAIN MATTER DETAILS, FOR OFFICE USE ONLY -->
+
+        <button type="submit">Submit Case</button>
+    </div>
+</body>
