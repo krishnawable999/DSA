@@ -1,39 +1,18 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Stack {
-public:
-    Stack(int capacity) {
-        top = -1;
-        size = capacity;
-        arr[size];
+int main(){
+    string str = "We promptly judged antique ivory buckles for the next prize";
+    unordered_map<char,int> mp;
+
+    for(int i=0 ; i<str.length() ; i++){
+        char ch = str[i];
+        mp[ch]++;
+    }
+    int count=0;
+    for(auto it:mp){
+        if(it.first) count++;
     }
 
-    void push(int value) {
-        if (top == size - 1)
-            cout << "Stack Overflow";
-        else
-            arr[++top] = value;
-    }
-
-    int pop() {
-        if (top == -1) {
-            cout << "Stack Underflow";
-            return -1;
-        }
-        return arr[top--];
-    }
-
-private:
-    int top;
-    int size;
-    int arr[];
-};
-
-int main() {
-    Stack myStack(5);
-    myStack.push(1);
-    myStack.push(2);
-    myStack.pop();
-    return 0;
+    cout<<count;
 }
