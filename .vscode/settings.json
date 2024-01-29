@@ -3,6 +3,8 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "map": "cpp",
+        "format": "cpp"
     }
 }
