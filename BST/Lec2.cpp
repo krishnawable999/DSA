@@ -200,28 +200,47 @@ Node *deleteBST(Node *root, int target){
     return root;
 }
 
+Node *bstFromInorder(int inorder[], int s, int e){
+    if(s > e){
+        return NULL;
+    }
+
+    int mid = (s+e)/2;
+    int ele = inorder[mid];
+    Node *root = new Node(ele);
+
+    root -> left = bstFromInorder(inorder,s,mid-1);
+    root -> right = bstFromInorder(inorder,mid+1, e);
+    return root;
+}
 
 int main(){
-    Node *root = NULL;
-    createBST(root);
-    cout<<endl;
-    levelOrderTraversal(root);
-    cout<<endl;
-    cout<<endl;
-    cout<<"Printing ans"<<endl;
-    // preOrder(root);
-    // cout<<endl;
-    // inOrder(root);
-    // cout<<endl;
-    // postOrder(root);
-    // cout<<endl;
-    //50 30 40 20 60 55 70 80 -1
-    // minValue(root);
-    // maxValue(root);
-    // cout<<"Target is present or not: "<<searchBST(root,55);
-    int key;
-    cout<<"Enter node to delete";
-    cin>>key;
-    deleteBST(root,70);
+//     Node *root = NULL;
+//     createBST(root);
+//     cout<<endl;
+//     levelOrderTraversal(root);
+//     cout<<endl;
+//     cout<<endl;
+//     cout<<"Printing ans"<<endl;
+//     // preOrder(root);
+//     // cout<<endl;
+//     // inOrder(root);
+//     // cout<<endl;
+//     // postOrder(root);
+//     // cout<<endl;
+//     //50 30 40 20 60 55 70 80 -1
+//     // minValue(root);
+//     // maxValue(root);
+//     // cout<<"Target is present or not: "<<searchBST(root,55);
+//     int key;
+//     cout<<"Enter node to delete";
+//     cin>>key;
+//     deleteBST(root,70);
+//     levelOrderTraversal(root);
+    int inorder[] = {10,20,30,40,50,60,70};
+    int size = 7;
+    int s=0;
+    int e=size-1;
+    Node *root = bstFromInorder(inorder,s,e);
     levelOrderTraversal(root);
 }
