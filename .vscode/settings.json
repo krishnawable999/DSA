@@ -5,6 +5,7 @@
         "ostream": "cpp",
         "numbers": "cpp",
         "map": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "new": "cpp"
     }
 }
