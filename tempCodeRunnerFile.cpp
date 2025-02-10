@@ -1,18 +1,36 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
+
 using namespace std;
 
-int main(){
-    string str = "We promptly judged antique ivory buckles for the next prize";
-    unordered_map<char,int> mp;
-
-    for(int i=0 ; i<str.length() ; i++){
-        char ch = str[i];
-        mp[ch]++;
+// Function to convert the given string to a binary string based on character groups
+void convertToBinaryString(const string& str1) {
+    string result = "";
+    for (char ch : str1) {
+        // Determine the binary value based on the character group
+        if (ch >= 'a' && ch <= 'e') {
+            result += '0';
+        } else if (ch >= 'f' && ch <= 'j') {
+            result += '1';
+        } else if (ch >= 'k' && ch <= 'o') {
+            result += '0';
+        } else if (ch >= 'p' && ch <= 't') {
+            result += '1';
+        } else if (ch >= 'u' && ch <= 'y') {
+            result += '0';
+        } else if (ch == 'z') {
+            result += '1';
+        }
     }
-    int count=0;
-    for(auto it:mp){
-        if(it.first) count++;
-    }
+    // Output the resultant binary string
+    cout << result << endl;
+}
 
-    cout<<count;
+int main() {
+    string str1;
+    // Read the input string from STDIN
+    cin >> str1;
+    // Convert the string to a binary string and display the result
+    convertToBinaryString(str1);
+    return 0;
 }

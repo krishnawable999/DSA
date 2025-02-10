@@ -45,4 +45,5 @@ int main(){
     // Virtual Function
     p.walk();
     p.walk();
+    p.Research();
 }
