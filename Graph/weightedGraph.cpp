@@ -81,8 +81,8 @@ int main(){
     g.addedge('b','e',0,21);
     g.addedge('e','h',0,21);
     g.addedge('e','i',0,21);
-
-    g.dfs('a', vis);
+    g.print();
+    // g.dfs('a', vis);
     // for(char node = 'a' ; node<='x' ; node++){
     //     if(!vis[node]){
     //         g.bfs(node, vis);
